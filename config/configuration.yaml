@@ -1,0 +1,135 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+mqtt:
+  sensor:
+    - name: "Power"
+      unique_id: "CCF81607004B1200_power"
+      state_topic: "smarthome/node/CCF81607004B1200/sensor/power/1027/value/power"
+      unit_of_measurement: "W"
+      device_class: power
+      state_class: measurement
+      force_update: true
+      device:
+        identifiers: ["CCF81607004B1200"]
+        name: "Wall Socket"
+        manufacturer: "Smart Sense"
+        model: "Zigbee Power Plug"
+
+    # This is the DELTA (per-interval) energy the plug reports
+    - name: "Energy Delta"
+      unique_id: "CCF81607004B1200_energy_delta"
+      state_topic: "smarthome/node/CCF81607004B1200/sensor/power/1027/value/energy"
+      unit_of_measurement: "kWh"
+      device_class: energy
+      state_class: measurement
+      force_update: true
+      device:
+        identifiers: ["CCF81607004B1200"]
+        name: "Wall Socket"
+        manufacturer: "Smart Sense"
+        model: "Zigbee Power Plug"
+
+    - name: "Temperature"
+      unique_id: "299AB91B004B1200_temperature"
+      state_topic: "smarthome/node/299AB91B004B1200/sensor/temperature/1026/value/actual"
+      unit_of_measurement: "°C"
+      device_class: temperature
+      state_class: measurement
+      force_update: true
+      device:
+        identifiers: ["299AB91B004B1200"]
+        name: "Combo Sensor"
+        manufacturer: "Smart Sense"
+        model: "Zigbee Temp/Humidity/Motion Sensor"
+
+    - name: "Humidity"
+      unique_id: "299AB91B004B1200_humidity"
+      state_topic: "smarthome/node/299AB91B004B1200/sensor/humidity/1029/value/actual"
+      unit_of_measurement: "%"
+      device_class: humidity
+      state_class: measurement
+      force_update: true
+      device:
+        identifiers: ["299AB91B004B1200"]
+        name: "Combo Sensor"
+        manufacturer: "Smart Sense"
+        model: "Zigbee Temp/Humidity/Motion Sensor"
+
+    - name: "Battery Estimate"
+      unique_id: "299AB91B004B1200_battery"
+      state_topic: "smarthome/node/299AB91B004B1200/battery/estimate"
+      unit_of_measurement: "%"
+      device_class: battery
+      state_class: measurement
+      force_update: true
+      device:
+        identifiers: ["299AB91B004B1200"]
+        name: "Combo Sensor"
+        manufacturer: "Smart Sense"
+        model: "Zigbee Temp/Humidity/Motion Sensor"
+
+    - name: "Battery Voltage"
+      unique_id: "299AB91B004B1200_battery_voltage"
+      state_topic: "smarthome/node/299AB91B004B1200/battery/voltage"
+      unit_of_measurement: "V"
+      device_class: voltage
+      state_class: measurement
+      force_update: true
+      device:
+        identifiers: ["299AB91B004B1200"]
+        name: "Combo Sensor"
+        manufacturer: "Smart Sense"
+        model: "Zigbee Temp/Humidity/Motion Sensor"
+
+  switch:
+    - name: "Switch"
+      unique_id: "CCF81607004B1200_switch"
+      state_topic: "smarthome/node/CCF81607004B1200/sensor/power/1027/value/status"
+      command_topic: "smarthome/node/CCF81607004B1200/sensor/power/1027/set/switch"
+      payload_on: "true"
+      payload_off: "false"
+      state_on: "true"
+      state_off: "false"
+      optimistic: false
+      device:
+        identifiers: ["CCF81607004B1200"]
+        name: "Wall Socket"
+        manufacturer: "Smart Sense"
+        model: "Zigbee Power Plug"
+
+  binary_sensor:
+    - name: "Door Sensor"
+      unique_id: "98653803C9435000_door"
+      state_topic: "smarthome/node/98653803C9435000/sensor/door/1032/value/status"
+      payload_on: "true"
+      payload_off: "false"
+      device_class: door
+      qos: 1              # ensure delivery even on brief network hiccups
+      device:
+        identifiers: ["98653803C9435000"]
+        name: "Door Sensor"
+        manufacturer: "Smart Sense"
+        model: "Zigbee Door Sensor"
+
+    - name: "Motion"
+      unique_id: "299AB91B004B1200_motion"
+      state_topic: "smarthome/node/299AB91B004B1200/sensor/motion/1030/value/status"
+      payload_on: "ACTIVE"
+      payload_off: "IDLE"
+      device_class: motion
+      qos: 1
+      device:
+        identifiers: ["299AB91B004B1200"]
+        name: "Combo Sensor"
+        manufacturer: "Smart Sense"
+        model: "Zigbee Temp/Humidity/Motion Sensor"
