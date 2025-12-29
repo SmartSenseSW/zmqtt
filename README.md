@@ -28,9 +28,8 @@ Otvorite kućište centralne jedinice. Iskon Smart-Home postoji u starijoj varij
 Pažljivo iskopčajte i uklonite Smart-Sense Zigbee HAT (pločicu nepravilnog oblika spojenu na 40-pinski Raspberry Pi GPIO port) da biste oslobodili pristup HDMI portu.
 
 ### Korak 4: Flashanje operativnog sustava
-Snimite aktualni **Raspberry Pi OS Lite** na SD karticu prema [uputama](https://www.raspberrypi.com/software/operating-systems/).
-* Koristite **64-bit Lite** verziju za **Pi 3**.
-* Koristite **32-bit Lite** verziju za **Pi 1**.
+Snimite aktualni **Raspberry Pi OS (32-bit) Lite** na SD karticu prema [uputama](https://www.raspberrypi.com/software/operating-systems/).
+* **Pi 3** također podržava 64-bit verziju, ali 32-bit radi brže i zauzima manje memorije.
 
 ### Korak 5: Prvo pokretanje
 1. Umetnite SD karticu, spojite monitor, tipkovnicu i napajanje.
