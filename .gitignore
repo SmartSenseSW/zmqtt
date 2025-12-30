@@ -1,0 +1,9 @@
+# Ignore the built package
+./*.deb
+
+# Ignore artifacts inside the build structure
+zmqtt-pkg/opt/zmqtt/*.py
+zmqtt-pkg/usr/share/doc/zmqtt-service/changelog.Debian.gz
+
+# Ignore repository db
+docs/db

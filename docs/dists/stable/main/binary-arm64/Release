@@ -1,0 +1,5 @@
+Component: main
+Origin: ZMQTT
+Label: ZMQTT
+Architecture: arm64
+Description: ZMQTT Repository

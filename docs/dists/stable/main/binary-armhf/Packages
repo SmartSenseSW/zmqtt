@@ -1,0 +1,18 @@
+Package: zmqtt-service
+Version: 1.0.1
+Architecture: all
+Essential: no
+Maintainer: Marko Pecic <marko.pecic@smart-sense.hr>
+Depends: python3, python3-rpi-lgpio, python3-paho-mqtt, python3-serial
+Priority: optional
+Section: custom
+Filename: pool/main/z/zmqtt-service/zmqtt-service_1.0.1_all.deb
+Size: 15440
+SHA512: cecaf50fdd455610030e6dafe189478d9d1ac83ad8fa6c090b61e4ef8cf2dcfc81f772726a17b4fc07b3979b7e0c0397d4fb6ce4a5d77f94e91f89f585e04f9e
+SHA256: c47370edca851283d9c2a3858fd2a756c1c60bd9b942928d63f42c862dd2f240
+SHA1: 1f665b072fd8c58242934b4005531f3ca393fc17
+MD5sum: 9008e084ffa698014afd1d43929abbf2
+Description: ZMQTT Python Service
+ A system service that runs zmqtt.py on boot.
+ Depends on Mosquitto.
+

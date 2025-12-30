@@ -1,0 +1,6 @@
+Origin: ZMQTT
+Label: ZMQTT
+Codename: stable
+Architectures: armhf arm64
+Components: main
+Description: ZMQTT Repository
