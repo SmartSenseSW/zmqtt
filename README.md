@@ -106,15 +106,15 @@ sudo apt-get install mosquitto mosquitto-clients python3-serial python3-paho-mqt
 
 Omogućite spajanje na Mosquitto s bilo kojeg mrežnog sučelja:
 ```bash
-curl -OL https://raw.githubusercontent.com/SmartSenseSW/zmqtt/refs/heads/main/all_interfaces.conf
-sudo cp all_interfaces.conf /etc/mosquitto/conf.d/
+echo -e "listener 1883 0.0.0.0\nallow_anonymous true" | sudo tee /etc/mosquitto/conf.d/all_interfaces.conf
 sudo systemctl restart mosquitto.service
 ```
 
 ### Korak 3. Instalacija zmqtt paketa
 ```bash
-curl -OL https://github.com/SmartSenseSW/zmqtt/releases/download/v1.0.1/zmqtt-service_1.0.1_all.deb
-sudo apt-get install ./zmqtt-service_1.0.1_all.deb
+echo "deb [trusted=yes] https://smartsensesw.github.io/zmqtt stable main" | sudo tee /etc/apt/sources.list.d/zmqtt.list
+sudo apt-get update
+sudo apt-get install zmqtt-service
 ```
 
 ## 5. Provjera rada
