@@ -1,0 +1,14 @@
+zmqtt-service (1.0.1) unstable; urgency=medium
+
+  * Removed uart port detection (fixes 32-bit RPi 3)
+  * Added RPI_LGPIO_REVISION env variable to code
+
+ -- Marko Pecic <marko.pecic@smart-sense.hr>  Tue, 30 Dec 2025 08:50:00 +0100
+
+zmqtt-service (1.0.0) unstable; urgency=medium
+
+  * Initial release.
+  * Added systemd service with restart logic.
+  * Added RPI_LGPIO_REVISION spoofing for older Pi models.
+
+ -- Marko Pecic <marko.pecic@smart-sense.hr>  Tue, 23 Dec 2025 10:40:00 +0100

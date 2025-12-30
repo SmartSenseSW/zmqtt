@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+# Only run this logic if the package is being removed
+if [ "$1" = "remove" ]; then
+    # Stop the service immediately
+    systemctl stop zmqtt.service || true
+    
+    # Disable the service (removes the symlinks in /etc/systemd/system/...)
+    systemctl disable zmqtt.service || true
+fi
+
+exit 0

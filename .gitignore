@@ -1,5 +1,5 @@
 # Ignore the built package
-./*.deb
+/*.deb
 
 # Ignore artifacts inside the build structure
 zmqtt-pkg/opt/zmqtt/*.py

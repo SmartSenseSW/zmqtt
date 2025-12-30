@@ -1,0 +1,11 @@
+Package: zmqtt-service
+Version: 1.0.1
+Section: custom
+Priority: optional
+Architecture: all
+Essential: no
+Maintainer: Marko Pecic <marko.pecic@smart-sense.hr>
+Depends: python3, python3-rpi-lgpio, python3-paho-mqtt, python3-serial
+Description: ZMQTT Python Service
+ A system service that runs zmqtt.py on boot.
+ Depends on Mosquitto.

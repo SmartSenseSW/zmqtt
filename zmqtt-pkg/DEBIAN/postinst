@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+# Reload systemd to recognize the new service file
+systemctl daemon-reload
+
+# Enable the service to start on boot
+systemctl enable zmqtt.service
+
+# Start (or restart) the service immediately
+systemctl restart zmqtt.service
+
+exit 0

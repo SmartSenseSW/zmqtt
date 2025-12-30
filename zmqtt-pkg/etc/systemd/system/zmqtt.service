@@ -1,0 +1,18 @@
+[Unit]
+Description=ZMQTT Python Service
+# Start after network is up and Mosquitto is ready
+After=network.target mosquitto.service
+# Ideally, we also Want mosquitto so systemd tries to start it if it's down
+Wants=mosquitto.service
+
+[Service]
+Type=simple
+User=root
+# Set the working directory so imports (like sbl.py) work correctly
+WorkingDirectory=/opt/zmqtt
+ExecStart=/usr/bin/python3 /opt/zmqtt/zmqtt.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
