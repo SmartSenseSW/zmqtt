@@ -113,24 +113,8 @@ sudo systemctl restart mosquitto.service
 
 ### Korak 3. Instalacija zmqtt paketa
 ```bash
-curl -OL https://github.com/SmartSenseSW/zmqtt/releases/download/v1.0.0/zmqtt-service_1.0.0_all.deb
-sudo apt-get install ./zmqtt-service_1.0.0_all.deb
-```
-
-### Korak 4. Promjena konfiguracije servisa (**samo za Raspberry Pi 1**)
-**Raspberry Pi 3** ispravno podržava metodu koju koristi LGPIO za identifikaciju pločice, za njega preskočite ovaj korak. Za **Raspberry Pi 1** je potrebno ručno dodati identifikacijski kod u definiciju zmqtt servisa:
-```bash
-sudo nano /etc/systemd/system/zmqtt.service
-```
-Dodajte u `[Service]` sekciju liniju:
-```
-Environment="RPI_LGPIO_REVISION=0x900030"
-```
-Nakon toga zaustavite i ponovno pokrenite zmqtt servis:
-```bash
-sudo systemctl daemon-reload
-sudo systemctl stop zmqtt.service
-sudo systemctl start zmqtt.service
+curl -OL https://github.com/SmartSenseSW/zmqtt/releases/download/v1.0.1/zmqtt-service_1.0.1_all.deb
+sudo apt-get install ./zmqtt-service_1.0.1_all.deb
 ```
 
 ## 5. Provjera rada
