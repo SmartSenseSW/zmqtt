@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ZMQTT Repository</title>
+    <style>body { font-family: sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }</style>
+</head>
+<body>
+    <h1>ZMQTT Debian Repository</h1>
+    <p>This is the official package repository for the ZMQTT Service.</p>
+
+    <h3>Installation</h3>
+    <p>Run the following commands on your Raspberry Pi:</p>
+
+    <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px;">
+# 1. Add the repository (Trusting unsigned)
+echo "deb [trusted=yes] https://smartsensesw.github.io/zmqtt stable main" | sudo tee /etc/apt/sources.list.d/zmqtt.list
+
+# 2. Update and Install
+sudo apt-get update
+sudo apt-get install zmqtt-service</pre>
+
+    <p><small>Repository Status: Active</small></p>
+</body>
+</html>
