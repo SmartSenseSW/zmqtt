@@ -7,6 +7,17 @@ import sys
 import serial
 import getopt
 import struct
+import os
+
+# insert env variable for pi 1 before importing GPIO
+try:
+    with open('/proc/device-tree/system/linux,revision', 'rb') as f:
+        rev = struct.unpack('>I', f.read(4))[0]
+        if not (rev >> 23 & 0x1):
+            os.environ['RPI_LGPIO_REVISION'] = '900030'
+except:
+    sys.exit(1)
+
 import RPi.GPIO as GPIO
 
 _serial_port_sbl = None

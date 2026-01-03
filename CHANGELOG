@@ -1,3 +1,9 @@
+zmqtt-service (1.0.2) unstable; urgency=medium
+
+  * Added RPI_LGPIO_REVISION env variable to sbl.py
+
+ -- Marko Pecic <marko.pecic@smart-sense.hr>  Sat, 3 Jan 2025 18:54:00 +0100
+
 zmqtt-service (1.0.1) unstable; urgency=medium
 
   * Removed uart port detection (fixes 32-bit RPi 3)

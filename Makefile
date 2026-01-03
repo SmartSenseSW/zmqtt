@@ -1,6 +1,6 @@
 # Project Variables
 PACKAGE_NAME := zmqtt-service
-VERSION := 1.0.1
+VERSION := 1.0.2
 ARCH := all
 DEB_NAME := $(PACKAGE_NAME)_$(VERSION)_$(ARCH).deb
 BUILD_DIR := zmqtt-pkg

@@ -16,7 +16,6 @@ smarthome/gateway/DDF51607004B1200/sw/rf_version v2.9.5
 
 Prva serija s Raspberry Pi 1 može se ručno ažurirati na firmware [v2.9.5](GWMC.bin).
 ```
-export RPI_LGPIO_REVISION=900030
 curl -OL https://raw.githubusercontent.com/SmartSenseSW/zmqtt/refs/heads/main/firmware/GWMC.bin
 sudo systemctl stop zmqtt.service
 sudo python3 /opt/zmqtt/sbl.py -i ./GWMC.bin -t /dev/ttyAMA0 -pf

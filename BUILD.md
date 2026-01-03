@@ -11,7 +11,7 @@
 1. Ažurirati verziju
   * unijeti promjene u [changelog](CHANGELOG)
   * staviti novu verziju u [makefile](Makefile)
-  * staviti novu verziju u [debian pkg](zmqtt-pkg/DEBIAN)
+  * staviti novu verziju u [debian pkg](zmqtt-pkg/DEBIAN/control)
 
 2. Izraditi .deb
 ```
