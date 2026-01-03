@@ -2,8 +2,7 @@
 
 U većini slučajeva **nije potrebno** raditi update Zigbee firmware-a, jer je na Iskonu bila aktivna opcija automatskog ažuriranja i sve centralne jedinice su dobile zadnji firmware:
 * v2.9.2 za prvu seriju (Raspberry Pi 1)
-* v2.9.5 za drugu seriju (Raspberry Pi 3)
-Jedina praktična razlika između ove dvije verzije je u podršci za Heiman-ov senzor dima.
+* v2.9.5 za drugu seriju (Raspberry Pi 3) - jedina praktična razlika u odnosu na v2.9.2 je u podršci za Heiman-ov senzor dima
 
 Trenutna verzija se vidi u MQTT porukama:
 ```bash
